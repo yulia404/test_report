@@ -1,0 +1,27 @@
+# /test-results/
+# /playwright-report/
+# /playwright/.cache/
+
+# Vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.idea
+
+# Local History for Visual Studio Code
+.history/
+
+# JavaScript
+node_modules/
+
+# Qase token
+.env.qase
+
+# Playwright settings
+.env.local
+
+# Session storage
+session/authenticated.json
