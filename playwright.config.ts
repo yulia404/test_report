@@ -2,7 +2,7 @@ import { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
   testDir: 'src/',
-  // reporter: [['line'], ['./src/qase/reporter']],
+  reporter: [['line'], ['html'], ['allure-playwright', {outputFolder: 'allure-result'}]],
   globalSetup: require.resolve('./global-setup'),
   // retries: 2,
   timeout: 60000,

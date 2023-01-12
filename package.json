@@ -10,12 +10,15 @@
     "lint:pretify": "prettier --write \"src/**/*.{ts,tsx,scss,json,graphql}\"",
     "lint": "eslint --fix . --ext .ts",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "test:reporter": "dotenv -e .env.local dotenv -e .env.staging playwright test --reporter=allure-playwright",
+    "allure-report": "npx allure generate allure-result && allure open"
   },
   "devDependencies": {
-    "@playwright/test": "1.27.1",
+    "@playwright/test": "^1.29.2",
     "@typescript-eslint/eslint-plugin": "5.9.0",
     "@typescript-eslint/parser": "^5.27.0",
+    "allure-playwright": "^2.0.0-beta.23",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
@@ -33,5 +36,20 @@
       "npm run lint",
       "git add"
     ]
+  },
+  "base": {
+    "logo": "",
+    "project": "",
+    "environment": "",
+    "comment": "",
+    "reportLink": "",
+    "language": "ru",
+    "allureFolder": "",
+    "enableChart": false
+  },
+  "slack": {
+    "token": "xoxb-4633429460581-4649374394017-2wGEvdVXugnRvYqV5q8g42YF",
+    "chat": "qa-test",
+    "replyTo": ""
   }
 }
